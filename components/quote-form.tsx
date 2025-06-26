@@ -92,22 +92,26 @@ export default function QuoteForm() {
 
         if (formData.selectedMachinery.roller) {
           const price =
-            formData.rentalPeriod === "day" ? "2,600" : formData.rentalPeriod === "week" ? "12,000" : "48,000"
+            formData.rentalPeriod === "day" ? "2,700" : formData.rentalPeriod === "week" ? "14,850" : "55,600"
           message += `  - Rodillo vibrocompactador: $${price} (${formData.rentalPeriod})%0A`
+          message += `  - Flete rodillo: $3,200%0A`
         }
 
         if (formData.selectedMachinery.miniLoader) {
           const price =
-            formData.rentalPeriod === "day" ? "3,400" : formData.rentalPeriod === "week" ? "18,300" : "72,000"
+            formData.rentalPeriod === "day" ? "3,300" : formData.rentalPeriod === "week" ? "18,300" : "72,000"
           message += `  - Mini cargador: $${price} (${formData.rentalPeriod})%0A`
+          message += `  - Flete mini cargador: $1,400%0A`
         }
 
         if (formData.selectedMachinery.excavator) {
-          message += `  - Retroexcavadora con martillo: $5,800 (día)%0A`
+          message += `  - Retroexcavadora con martillo: $6,200 (día)%0A`
+          message += `  - Flete retroexcavadora: $3,600%0A`
         }
 
         if (formData.selectedMachinery.excavatorSimple) {
-          message += `  - Retroexcavadora sencilla: $4,800 (día)%0A`
+          message += `  - Retroexcavadora sencilla: $5,200 (día)%0A`
+          message += `  - Flete retroexcavadora: $3,600%0A`
         }
 
         if (formData.machineryType) {
