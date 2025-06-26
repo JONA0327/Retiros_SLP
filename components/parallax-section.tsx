@@ -22,7 +22,10 @@ export default function ParallaxSection({ imageSrc }: ParallaxSectionProps) {
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.95, 1, 0.95])
 
   return (
-    <section ref={sectionRef} className="py-32 bg-zinc-950 relative overflow-hidden">
+    <section
+      ref={sectionRef}
+      className="py-24 md:py-32 bg-zinc-950 relative overflow-hidden"
+    >
       <motion.div style={{ y, opacity, scale }} className="absolute inset-0 z-0">
         <Image
           src="/images/land-preparation.jpeg"

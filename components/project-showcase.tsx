@@ -36,7 +36,10 @@ export default function ProjectShowcase({ videoSrc, imageSrc }: ProjectShowcaseP
   }
 
   return (
-    <section ref={sectionRef} className="py-32 bg-gradient-to-b from-zinc-900 to-zinc-950 relative overflow-hidden">
+    <section
+      ref={sectionRef}
+      className="py-24 md:py-32 bg-gradient-to-b from-zinc-900 to-zinc-950 relative overflow-hidden"
+    >
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-red-500/10 via-transparent to-transparent"></div>
       </div>
@@ -61,7 +64,7 @@ export default function ProjectShowcase({ videoSrc, imageSrc }: ProjectShowcaseP
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative rounded-3xl overflow-hidden w-full min-h-[500px]"
+            className="relative rounded-3xl overflow-hidden w-full min-h-[400px] sm:min-h-[500px]"
           >
             {/* Hero background con video */}
             <div className="absolute inset-0">
@@ -141,7 +144,7 @@ export default function ProjectShowcase({ videoSrc, imageSrc }: ProjectShowcaseP
           </motion.div>
         </div>
 
-        <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="mt-16 md:mt-24 grid grid-cols-1 md:grid-cols-3 gap-6">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
