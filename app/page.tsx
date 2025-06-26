@@ -137,7 +137,7 @@ export default function Home() {
                 title: "Suministro de Materiales",
                 materials: ["Tepetate", "Arena", "Grava", "Base hidráulica", "Sello", "Piedra bola", "Tezontle"],
                 capacities: ["7 m³", "14 m³"],
-                note: "Cotiza sin compromiso. Precios especiales para volúmenes grandes.",
+                note: "Consulta por nuestros precios",
               }}
             />
           </div>
