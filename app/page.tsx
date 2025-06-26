@@ -54,7 +54,9 @@ export default function Home() {
                   { name: "Retroexcavadora sencilla", price: "$5,200", unit: "día" },
                   { name: "Flete", price: "$3,600", unit: "viaje" },
                 ],
-                note: "Renta por día con operador y diésel incluido.",
+
+                note: "El costo depende de la zona, necesidades, ubicación y horario (nocturno o diurno). Indica si se requiere retroexcavadora con martillo o sencilla.",
+
               }}
             />
             <ServiceCard
@@ -69,7 +71,7 @@ export default function Home() {
                   { name: "Terreno básico", price: "$35", unit: "m²" },
                   { name: "Con vegetación", price: "$45", unit: "m²" },
                 ],
-                note: "Incluye retiro de maleza y nivelación básica.",
+                note: "El servicio puede ser sólo limpieza o incluir retiro de material; el precio varía según la opción requerida.",
               }}
             />
             <ServiceCard
