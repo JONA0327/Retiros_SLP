@@ -54,7 +54,9 @@ export default function Home() {
                   { name: "Retroexcavadora sencilla", price: "$5,200", unit: "día" },
                   { name: "Flete", price: "$3,600", unit: "viaje" },
                 ],
+
                 note: "El costo depende de la zona, necesidades, ubicación y horario (nocturno o diurno). Indica si se requiere retroexcavadora con martillo o sencilla.",
+
               }}
             />
             <ServiceCard
