@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Truck, Building, Shovel, Droplet, Package, HardHat, Phone, Mail, MapPin } from "lucide-react"
+import { Truck, Building, Shovel, Droplet, Package, HardHat, Phone, Mail, MapPin, Facebook } from "lucide-react"
 import Image from "next/image"
 import QuoteForm from "@/components/quote-form"
 import ServiceCard from "@/components/service-card"
@@ -335,11 +335,13 @@ export default function Home() {
                 <h3 className="text-2xl font-semibold mb-6">Síguenos</h3>
                 <div className="flex space-x-4">
                   <a
-                    href="#"
+                    href="https://www.facebook.com/retirosysuministros"
                     className="h-12 w-12 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-red-500 transition-colors duration-300"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <span className="sr-only">Facebook</span>
-                    {/* Facebook icon */}
+                    <Facebook className="h-6 w-6" />
                   </a>
                   <a
                     href="#"
