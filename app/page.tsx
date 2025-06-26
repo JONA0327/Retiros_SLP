@@ -316,7 +316,7 @@ export default function Home() {
                   </div>
                   <div className="ml-6">
                     <h3 className="text-xl font-medium mb-2">Teléfono</h3>
-                    <p className="text-zinc-400 text-lg">+52 (444) 123-4567</p>
+                    <p className="text-zinc-400 text-lg">+52 (488) 114-4890</p>
                   </div>
                 </div>
 
