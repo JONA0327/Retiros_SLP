@@ -97,16 +97,6 @@ export default function ParallaxSection({ imageSrc }: ParallaxSectionProps) {
               </motion.div>
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.7 }}
-              viewport={{ once: true }}
-            >
-              <Button className="mt-10 bg-red-500 hover:bg-red-600 text-white px-8 py-6 text-lg rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-red-500/20 hover:scale-105">
-                Conoce más <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </motion.div>
           </div>
         </div>
       </div>

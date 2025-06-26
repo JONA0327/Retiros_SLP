@@ -343,13 +343,6 @@ export default function Home() {
                     <span className="sr-only">Facebook</span>
                     <Facebook className="h-6 w-6" />
                   </a>
-                  <a
-                    href="#"
-                    className="h-12 w-12 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-red-500 transition-colors duration-300"
-                  >
-                    <span className="sr-only">Instagram</span>
-                    {/* Instagram icon */}
-                  </a>
                 </div>
               </div>
             </div>

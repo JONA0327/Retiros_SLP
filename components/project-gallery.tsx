@@ -231,11 +231,7 @@ export default function ProjectGallery() {
         </TabsContent>
       </Tabs>
 
-      <div className="flex justify-center mt-12">
-        <Button className="bg-zinc-800 hover:bg-red-500 text-white px-8 py-6 text-lg rounded-full">
-          Ver más proyectos <ArrowRight className="ml-2 h-5 w-5" />
-        </Button>
-      </div>
+
 
       {/* Project Detail Modal */}
       <Dialog open={!!selectedProject} onOpenChange={(open) => !open && setSelectedProject(null)}>

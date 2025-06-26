@@ -105,9 +105,6 @@ export default function ProjectShowcase({ videoSrc, imageSrc }: ProjectShowcaseP
               <p className="text-lg md:text-xl text-white/90 max-w-2xl mb-6 drop-shadow-md">
                 Conoce nuestro trabajo destacado en construcción y demolición profesional
               </p>
-              <Button className="bg-red-500 hover:bg-red-600 text-white px-6 py-3 text-lg rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-red-500/20">
-                Ver galería <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
             </div>
           </motion.div>
 
@@ -141,9 +138,6 @@ export default function ProjectShowcase({ videoSrc, imageSrc }: ProjectShowcaseP
                 <p className="text-zinc-400">8 personas</p>
               </div>
             </div>
-            <Button className="bg-red-500 hover:bg-red-600 text-white px-8 py-6 text-lg rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-red-500/20">
-              Ver más proyectos <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
           </motion.div>
         </div>
 
