@@ -1,8 +1,6 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Play, Pause } from "lucide-react"
 import Image from "next/image"
 
 interface VideoHeroProps {
@@ -10,7 +8,6 @@ interface VideoHeroProps {
 }
 
 export default function VideoHero({ videoSrc }: VideoHeroProps) {
-  const [isPlaying, setIsPlaying] = useState(false)
   const [isLoaded, setIsLoaded] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
 
@@ -20,33 +17,13 @@ export default function VideoHero({ videoSrc }: VideoHeroProps) {
 
     const handleCanPlay = () => {
       setIsLoaded(true)
-      if (isPlaying) {
-        video.play().catch(() => {
-          setIsPlaying(false)
-        })
-      }
     }
 
     video.addEventListener("canplay", handleCanPlay)
     return () => {
       video.removeEventListener("canplay", handleCanPlay)
     }
-  }, [isPlaying])
-
-  const togglePlay = () => {
-    const video = videoRef.current
-    if (!video) return
-
-    if (isPlaying) {
-      video.pause()
-      setIsPlaying(false)
-    } else {
-      video.play().catch(() => {
-        setIsPlaying(false)
-      })
-      setIsPlaying(true)
-    }
-  }
+  }, [])
 
   return (
     <section className="relative h-screen flex items-center">
@@ -93,28 +70,7 @@ export default function VideoHero({ videoSrc }: VideoHeroProps) {
           <p className="text-xl md:text-2xl text-zinc-300 mb-12 max-w-3xl font-light">
             Demoliciones, renta de maquinaria y suministro de materiales con precisión y eficiencia.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6">
-            <Button size="lg" className="bg-red-500 hover:bg-red-600 text-white px-8 py-6 text-lg rounded-full">
-              Cotiza tu proyecto
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="text-white border-zinc-700 hover:bg-zinc-800 px-8 py-6 text-lg rounded-full"
-            >
-              Explora servicios <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </div>
-
-          {/* Video controls */}
-          <Button
-            onClick={togglePlay}
-            variant="ghost"
-            size="icon"
-            className="absolute bottom-10 right-10 h-16 w-16 rounded-full bg-red-500/20 hover:bg-red-500/30 backdrop-blur-sm"
-          >
-            {isPlaying ? <Pause className="h-8 w-8 text-white" /> : <Play className="h-8 w-8 text-white ml-1" />}
-          </Button>
+          {/* Action buttons removed */}
         </div>
       </div>
     </section>

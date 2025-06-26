@@ -1,8 +1,8 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Play, Pause, ChevronDown } from "lucide-react"
+import { ArrowRight, ChevronDown } from "lucide-react"
 import Image from "next/image"
 import { motion } from "framer-motion"
 
@@ -11,7 +11,6 @@ interface FullscreenHeroProps {
 }
 
 export default function FullscreenHero({ videoSrc }: FullscreenHeroProps) {
-  const [isPlaying, setIsPlaying] = useState(false)
   const [isLoaded, setIsLoaded] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
 
@@ -21,33 +20,13 @@ export default function FullscreenHero({ videoSrc }: FullscreenHeroProps) {
 
     const handleCanPlay = () => {
       setIsLoaded(true)
-      if (isPlaying) {
-        video.play().catch(() => {
-          setIsPlaying(false)
-        })
-      }
     }
 
     video.addEventListener("canplay", handleCanPlay)
     return () => {
       video.removeEventListener("canplay", handleCanPlay)
     }
-  }, [isPlaying])
-
-  const togglePlay = () => {
-    const video = videoRef.current
-    if (!video) return
-
-    if (isPlaying) {
-      video.pause()
-      setIsPlaying(false)
-    } else {
-      video.play().catch(() => {
-        setIsPlaying(false)
-      })
-      setIsPlaying(true)
-    }
-  }
+  }, [])
 
   const scrollToNextSection = () => {
     window.scrollTo({
@@ -132,45 +111,11 @@ export default function FullscreenHero({ videoSrc }: FullscreenHeroProps) {
             Demoliciones, renta de maquinaria y suministro de materiales con precisión y eficiencia.
           </motion.p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-col sm:flex-row gap-6 w-full justify-center mb-10"
-          >
-            <Button
-              size="lg"
-              className="bg-red-500 hover:bg-red-600 text-white px-10 py-7 text-lg rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-red-500/20 hover:scale-105"
-            >
-              Cotiza tu proyecto
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="text-white border-zinc-700 hover:bg-zinc-800 px-10 py-7 text-lg rounded-full transition-all duration-300 hover:scale-105"
-            >
-              Explora servicios <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </motion.div>
+          {/* Action buttons removed */}
         </motion.div>
       </div>
 
-      {/* Video controls */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 1.2 }}
-        className="absolute bottom-20 right-10 z-20"
-      >
-        <Button
-          onClick={togglePlay}
-          variant="ghost"
-          size="icon"
-          className="h-16 w-16 rounded-full bg-red-500/20 hover:bg-red-500/30 backdrop-blur-sm transition-all duration-300 hover:scale-110"
-        >
-          {isPlaying ? <Pause className="h-8 w-8 text-white" /> : <Play className="h-8 w-8 text-white ml-1" />}
-        </Button>
-      </motion.div>
+      {/* Video controls removed */}
 
       {/* Scroll indicator */}
       <motion.div
