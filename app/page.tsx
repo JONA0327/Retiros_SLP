@@ -49,10 +49,12 @@ export default function Home() {
               serviceInfo={{
                 title: "Servicio de demoliciones",
                 details: [
-                  { name: "Retroexcavadora con martillo", price: "$5,800", unit: "día" },
-                  { name: "Retroexcavadora sencilla", price: "$4,800", unit: "día" },
+                  { name: "Retroexcavadora con martillo", price: "$6,200", unit: "día" },
+                  { name: "Flete", price: "$3,600", unit: "viaje" },
+                  { name: "Retroexcavadora sencilla", price: "$5,200", unit: "día" },
+                  { name: "Flete", price: "$3,600", unit: "viaje" },
                 ],
-                note: "Precios por jornada completa de trabajo.",
+                note: "El costo depende de la zona, necesidades, ubicación y horario (nocturno o diurno). Indica si se requiere retroexcavadora con martillo o sencilla.",
               }}
             />
             <ServiceCard
@@ -67,7 +69,7 @@ export default function Home() {
                   { name: "Terreno básico", price: "$35", unit: "m²" },
                   { name: "Con vegetación", price: "$45", unit: "m²" },
                 ],
-                note: "Incluye retiro de maleza y nivelación básica.",
+                note: "El servicio puede ser sólo limpieza o incluir retiro de material; el precio varía según la opción requerida.",
               }}
             />
             <ServiceCard
@@ -77,9 +79,12 @@ export default function Home() {
               index={2}
               backgroundImages={["/images/debris-hauling-1.jpeg", "/images/debris-hauling-2.jpeg"]}
               serviceInfo={{
-                title: "Servicio de recolección de escombro",
-                details: [{ name: "Camión de 7 m³", price: "$1,300", unit: "viaje" }],
-                note: "Servicio dentro de la mancha urbana.",
+                title: "Viaje de escombro con mini cargador",
+                details: [
+                  { name: "Zona urbana", price: "$1,300", unit: "viaje" },
+                  { name: "Zona industrial", price: "$1,500", unit: "viaje" },
+                ],
+                note: "Asistencia con mini cargador incluida.",
               }}
             />
             <ServiceCard
@@ -96,14 +101,14 @@ export default function Home() {
               serviceInfo={{
                 title: "Maquinaria Pesada",
                 details: [
-                  { name: "Rodillo vibrocompactador 10 toneladas", price: "$2,600", unit: "día" },
-                  { name: "Rodillo vibrocompactador (semanal)", price: "$12,000", unit: "semana" },
-                  { name: "Rodillo vibrocompactador (mensual)", price: "$48,000", unit: "mes" },
-                  { name: "Mini cargador con operación y diesel", price: "$3,400", unit: "día" },
-                  { name: "Mini cargador (semanal)", price: "$18,300", unit: "semana" },
-                  { name: "Mini cargador (mensual)", price: "$72,000", unit: "mes" },
+                  { name: "Rodillo vibrocompactador 10 toneladas", price: "$2,700", unit: "día" },
+                  { name: "Rodillo vibrocompactador (semanal)", price: "$14,850", unit: "semana" },
+                  { name: "Rodillo vibrocompactador (mensual)", price: "$55,600", unit: "mes" },
+                  { name: "Flete rodillo", price: "$3,200", unit: "viaje" },
+                  { name: "Mini cargador", price: "$3,300", unit: "día" },
+                  { name: "Flete mini cargador", price: "$1,400", unit: "viaje" },
                 ],
-                note: "Precios más IVA. Consulta disponibilidad y condiciones de renta.",
+                note: "Renta por día con operador y diésel incluido. Precios más IVA.",
               }}
             />
             <ServiceCard
@@ -113,12 +118,11 @@ export default function Home() {
               index={4}
               backgroundImages={["/images/water-truck-1.jpeg", "/images/water-truck-3.png"]}
               serviceInfo={{
-                title: "Servicio de Pipa de Agua",
+                title: "Pipa de agua (10 mil litros)",
                 details: [
-                  { name: "Viaje en mancha urbana", price: "$1,100", unit: "viaje" },
-                  { name: "Renta semanal con operación (sin diesel)", price: "$13,500", unit: "semana" },
+                  { name: "Precio por viaje", price: "$1,200", unit: "viaje" },
                 ],
-                note: "Servicio disponible con previa reservación. Consulte disponibilidad.",
+                note: "Entrega en un solo punto. Para múltiples entregas cotizar vía WhatsApp.",
               }}
             />
             <ServiceCard
